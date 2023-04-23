@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adding comment</title>
+</head>
+<body>
+   <img src="unfilled heart.jpeg">
+    <button onclick="display()">Comment</button><br><br>
+    <div id="add">
+      <input type="text" placeholder="name"><br><br>
+      <textarea rows="5" cols="40"></textarea>
+      <button onclick="addComment()">AddComment</button>
+    </div>
+
+<script>
+    var comments=[];
+    var addDiv=document.getElementById("add");
+    addDiv.style.display="none";
+    function display(){
+        addDiv.style.display="inline";
+    }
+    function addComment(){
+        var name=document.getElementById("add").value;
+        var comment=document.getElementById("add").value;
+        var id=generateUniqueId();
+        var commentObj={
+            name: name,
+            comment: comment,
+            id: id
+        }
+    }
+    comments.push(commentObj);
+    console.log(commentsObj);
+    document.getElementById("name").value = "";
+    document.getElementById("comment").value = "";
+    var uniqueid=1;
+    function generateUniqueId(){
+        uniqueid++;
+        return uniqueid;
+    }
+</script>
+</body>
+</html>
